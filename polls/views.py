@@ -26,7 +26,7 @@ def vote(request, question_id):
     try:
         selected_choice = quesiton.choice_set.get(pk=request.POST['choice'])
     except:
-        return render(request,'polls/detail.html',{
+        return render(request, 'polls/detail.html', {
             'question':quesiton,
             "error_message":"You didn't select a choice.",
         })
