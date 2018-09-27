@@ -8,6 +8,9 @@ class Person(models.Model):
     brithday = models.DateField('生日',default=timezone.now)
     photo = models.FileField('照片',upload_to='media/',default='')
 
+    def __str__(self):
+        return self.first_name
+
 
 '''一对多'''
 # 递归外健
@@ -34,6 +37,28 @@ class Manufacturer(models.Model):
         return self.name
 
 '''多对多'''
+
+class Student(models.Model):
+    name = models.CharField(max_length=128)
+
+    def class_list(self):
+        return ','.join([i.name for i in self.class_set.all()])
+
+    def __str__(self):
+        return self.name
+
+class Class(models.Model):
+    name = models.CharField(max_length=128)
+    members = models.ManyToManyField(Student,blank=True)
+
+    def student_list(self):
+        return ','.join(i.name for i in self.members.all())
+
+    def __str__(self):
+        return self.name
+
+
+
 
 
 
