@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Person,Comment,Car,Manufacturer,Student,Class
+from .models.models import Person,Comment,Car,Manufacturer,Student,Class
 
 class ClassAdmin(admin.ModelAdmin):
     list_display = ['id','name','student_list']
