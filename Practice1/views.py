@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
+import os
 
 def index(request):
     pass
     return render(request,'Practice1/index.html')
 
 def login(request):
-    pass
     return render(request,'Practice1/login.html')
 
 def register(request):
