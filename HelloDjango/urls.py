@@ -26,6 +26,7 @@ urlpatterns = [
     re_path(r'^articles/(?P<year>[0-9]{4})/$', AbMViews.articles), # 转发到AboutModel的views的视图
     re_path(r'AboutModel/', include('AboutModel.urls')),# 转发到二级路由
     re_path(r'Practice1/',include('Practice1.urls')),
+    re_path(r'captcha',include('captcha.urls'))
 
 ]
 

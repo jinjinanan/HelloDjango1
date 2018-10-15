@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'AboutModel.apps.AboutmodelConfig',
     'Practice1.apps.Practice1Config',
+    'captcha',
 ]
 
 MIDDLEWARE = [
