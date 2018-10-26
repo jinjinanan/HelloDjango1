@@ -39,11 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'app1.apps.App1Config',
     'polls.apps.PollsConfig',
     'AboutModel.apps.AboutmodelConfig',
     'Practice1.apps.Practice1Config',
     'captcha',
+    'PersonalProject.apps.PersonalprojectConfig',
+
 ]
 
 MIDDLEWARE = [
