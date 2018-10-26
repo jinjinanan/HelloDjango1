@@ -19,8 +19,11 @@ from django.urls import path,include,re_path
 from app1 import views
 from AboutModel import views as AbMViews
 
+from PersonalProject.Routs import router
+
 urlpatterns = [
     re_path(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    
     path('admin/', admin.site.urls),
     path(r'polls/',include('polls.urls')),
     path(r'index/',views.index),
@@ -28,6 +31,8 @@ urlpatterns = [
     re_path(r'AboutModel/', include('AboutModel.urls')),# 转发到二级路由
     re_path(r'Practice1/',include('Practice1.urls')),
     re_path(r'captcha',include('captcha.urls')),
+
+    re_path(r'^PP-API/', include(router.urls)),
     re_path(r'PP/',include('PersonalProject.urls')),
 
 ]
